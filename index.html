@@ -74,13 +74,22 @@
     <p id="response">Awaiting your command...</p>
 
     <script>
-        function runJarvis() {
-            let command = document.getElementById("command").value;
+        
+function runJarvis() {
+    let command = document.getElementById("command").value;
 
-            document.getElementById("response").innerText =
-                "Sir, you said: " + command;
+    let response = document.getElementById("response");
+
+    response.innerText = "Sir, you said: " + command;
+
+    let speech = new SpeechSynthesisUtterance(
+        "Yes sir. You said " + command
+    );
+
+    speech.rate = 0.9;
+    speech.pitch = 0.8;
+    speech.volume = 1;
+
+    window.speechSynthesis.speak(speech);
         }
-    </script>
-
-</body>
-</html>
+        
