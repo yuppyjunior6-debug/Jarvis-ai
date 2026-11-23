@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS AI</title>
+
+    <style>
+        body {
+            background: #050b18;
+            color: #00eaff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 45px;
+            text-shadow: 0 0 20px #00eaff;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            border: 3px solid #00eaff;
+            border-radius: 50%;
+            margin: 40px auto;
+            box-shadow: 0 0 30px #00eaff;
+        }
+
+        input {
+            padding: 15px;
+            width: 75%;
+            background: #101c30;
+            color: white;
+            border: 1px solid #00eaff;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 15px 25px;
+            background: #00eaff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        #response {
+            margin-top: 25px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>J.A.R.V.I.S</h1>
+    <p>JUST A RATHER VERY INTELLIGENT SYSTEM</p>
+
+    <div class="circle"></div>
+
+    <h3>Good evening, Sir.</h3>
+    <p>Your personal AI assistant is online.</p>
+
+    <input id="command" placeholder="Enter your command...">
+
+    <br>
+
+    <button onclick="runJarvis()">EXECUTE</button>
+
+    <p id="response">Awaiting your command...</p>
+
+    <script>
+        function runJarvis() {
+            let command = document.getElementById("command").value;
+
+            document.getElementById("response").innerText =
+                "Sir, you said: " + command;
+        }
+    </script>
+
+</body>
+</html>
